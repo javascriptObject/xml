@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE students SYSTEM "student.dtd">
+<?xml-stylesheet type="text/css" href="student.css"?>
+<students>
+	<student>
+		<name>小明</name>
+		<age>10</age>
+		<school>北大附小</school>
+	</student>
+	<student>
+		<name>小红</name>
+		<age>15</age>
+		<school>清华中学</school>
+	</student>
+	<student>
+		<name>小强</name>
+		<age>99</age>
+		<school>小强小学</school>
+	</student>
+	<student>
+		<name>小灰灰</name>
+		<age>12</age>
+		<school>学校</school>
+	</student>
+</students>

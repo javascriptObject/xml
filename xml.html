@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function getval(){
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET","student.xml",false);
+            xmlhttp.send(null);
+            var xmlText = xmlhttp.responseXML;
+
+//            if (window.DOMParser)
+//            {
+//                parser=new DOMParser();
+//                xmlDoc=parser.parseFromString(xmlText,"text/xml");
+//            }
+//            else // Internet Explorer
+//            {
+//                xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+//                xmlDoc.async="false";
+//                xmlDoc.load("student.xml");
+//            }
+
+            for(var i = 0; i < xmlText.getElementsByTagName("name").length; i++){
+                document.getElementById("student").innerHTML += "姓名："+xmlText.getElementsByTagName("name")[i].childNodes[0].nodeValue+"<br/>";
+                document.getElementById("student").innerHTML += "年龄："+xmlText.getElementsByTagName("age")[i].childNodes[0].nodeValue+"<br/>";
+                document.getElementById("student").innerHTML += "学校："+xmlText.getElementsByTagName("school")[i].childNodes[0].nodeValue+"<br/>";
+                document.getElementById("student").innerHTML += "<br/>";
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="提取数据" onclick="getval()" /><br />
+    <!--<b>姓名:</b> <span id="name"></span><br />-->
+    <!--<b>年龄:</b> <span id="age"></span><br />-->
+    <!--<b>学校:</b> <span id="school"></span>-->
+    <div id="student"></div>
+</body>
+</html>
