@@ -1,7 +1,7 @@
 # xml
 
 pet1.xml
-gfdgdg
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <宠物们>
