@@ -1,7 +1,7 @@
 # xml
 
 pet1.xml
-
+fdfsdfds
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <宠物们>
@@ -110,53 +110,4 @@ xml.html
     </script>
 </head>
 <body>
-    <input type="button" value="提取数据" onclick="getval()" /><br />
-    <!--<b>姓名:</b> <span id="name"></span><br />-->
-    <!--<b>年龄:</b> <span id="age"></span><br />-->
-    <!--<b>学校:</b> <span id="school"></span>-->
-    <div id="student"></div>
-</body>
-</html>
-```
-
-xml-str.html
-
-```
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-    <script>
-        txt="<bookstore><book>";
-        txt=txt+"<title>Everyday Italian</title>";
-        txt=txt+"<author>Giada De Laurentiis</author>";
-        txt=txt+"<year>2005</year>";
-        txt=txt+"</book></bookstore>";
-//        <bookstore>
-//            <book>
-//                <title>Everyday Italian</title>
-//                <author>Giada De Laurentiis</author>
-//                <year>2005</year>
-//            </book>
-//        </bookstore>
-        if (window.DOMParser)
-        {
-            parser=new DOMParser();
-            var xmlDoc=parser.parseFromString(txt,"text/xml");
-            alert(xmlDoc.getElementsByTagName("year")[0].childNodes[0].nodeValue);
-        }
-        else // Internet Explorer
-        {
-            var xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
-            xmlDoc.async="false";
-            xmlDoc.loadXML(txt);
-            alert(xmlDoc.getElementsByTagName("author")[0].childNodes[0].nodeValue);
-        }
-    </script>
-</head>
-<body>
-    <input type="text" id="aa"/>
-</body>
-</html>
-```
+    <input type="button" value="提取
